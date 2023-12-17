@@ -16,15 +16,16 @@ FG_CYAN="\[\e[36m\]"
 FG_GREEN="\[\e[32m\]"
 FG_YELLOW="\[\e[33m\]"
 FG_GREY="\[\e[37m\]"
-FG_MAGENTA="\[\e[35m\]"
-FG_RED="\[\e[31m\]"
+FG_RED="\[\e[35m\]"
+FG_MAGENTA="\[\e[31m\]"
 FG_WHITE="\[\e[97m\]"
 BG_BLACK="\[\e[40m\]"
 BG_BLUE="\[\e[44m\]"
 BG_CYAN="\[\e[46m\]"
 BG_GREEN="\[\e[42m\]"
 BG_YELLOW="\[\e[43m\]"
-BG_MAGENTA="\[\e[45m\]"
+BG_RED="\[\e[45m\]"
+BG_MAGENTA="\[\e[41m\]]"
 
 PS1="\n ${FG_BLUE}╭─" # begin arrow to prompt
 PS1+="${FG_MAGENTA}" # begin USERNAME container
@@ -54,3 +55,6 @@ do
 done < <(find . -maxdepth 1 -printf "%M\t%f\0")
 }
 alias ll="lscolor"
+export PATH=$PATH:/home/lua/introprg/.introprg
+export CLASSPATH=${CLASSPATH:-.}:/home/lua/introprg/.introprg
+CLASSPATH=$CLASSPATH:/home/lua/introprg/.introprg/junit-platform-console-standalone.jar
